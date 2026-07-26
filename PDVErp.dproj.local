@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2026/07/19 00:36:18.000.212,=C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2026/07/23 18:09:29.000.828,=C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2026/07/26 03:23:21.351,=C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2026/07/26 03:29:20.789,E:\MiniErp\Unit1.pas=C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2026/07/26 03:29:20.790,E:\MiniErp\Unit1.dfm=C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2026/07/26 03:29:29.532,E:\MiniErp\PDVErp.dproj=C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2026/07/26 03:29:49.107,=E:\MiniErp\Unit2.pas</Transaction>
+    <Transaction>2026/07/26 03:30:17.471,E:\MiniErp\uDMConexao.dfm=E:\MiniErp\Unit2.dfm</Transaction>
+    <Transaction>2026/07/26 03:30:17.471,E:\MiniErp\uDMConexao.pas=E:\MiniErp\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>

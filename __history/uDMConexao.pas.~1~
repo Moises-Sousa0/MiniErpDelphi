@@ -1,0 +1,27 @@
+unit uDMConexao;
+
+interface
+
+uses
+  System.SysUtils, System.Classes;
+
+type
+  TDmConexao = class(TDataModule)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DmConexao: TDmConexao;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses Unit1;
+
+{$R *.dfm}
+
+end.
