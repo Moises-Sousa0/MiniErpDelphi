@@ -4,14 +4,13 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, DAO.Operador, Model.Operador;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
 
 type
-  TForm1 = class(TForm)
+  TfrmPrincipal = class(TForm)
     edtLoginUser: TEdit;
     edtSenhaUser: TEdit;
     btnEntrarAcesso: TButton;
-    procedure btnEntrarAcessoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -19,7 +18,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmPrincipal: TfrmPrincipal;
 
 implementation
 
@@ -27,28 +26,6 @@ implementation
 
 uses uDMConexao;
 
-procedure TForm1.btnEntrarAcessoClick(Sender: TObject);
-var
-  DAO: TOperadorDAO;
-  OperadorLogado: TOperador;
 
-begin
-  DAO := TOperadorDAO.Create;
-  try
-    OperadorLogado := DAO.Autenticar(edtLoginUser.Text, edtSenhaUser.Text);
-    try
-      if Assigned(OperadorLogado) then
-      begin
-        ShowMessage('Bem vindo, ' + OperadorLogado.Nome);
-      end
-      else
-        ShowMessage('Login ou senha inválidos');
-    finally
-    OperadorLogado.Free;
-    end;
-  finally
-    DAO.Free;
-  end;
-end;
 
 end.

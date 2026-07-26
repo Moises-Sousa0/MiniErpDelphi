@@ -1,0 +1,40 @@
+object FrmLogin: TFrmLogin
+  Left = 0
+  Top = 0
+  Caption = 'Login'
+  ClientHeight = 441
+  ClientWidth = 624
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object btnEntrarAcesso: TButton
+    Left = 224
+    Top = 168
+    Width = 121
+    Height = 49
+    Caption = 'Entrar'
+    TabOrder = 0
+    OnClick = btnEntrarAcessoClick
+  end
+  object edtLoginUser: TEdit
+    Left = 224
+    Top = 64
+    Width = 121
+    Height = 23
+    TabOrder = 1
+    TextHint = 'Login'
+  end
+  object edtSenhaUser: TEdit
+    Left = 224
+    Top = 104
+    Width = 121
+    Height = 23
+    PasswordChar = '*'
+    TabOrder = 2
+    TextHint = 'Login'
+  end
+end

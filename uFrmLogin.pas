@@ -7,11 +7,12 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, DAO.Operador, Model.Operador;
 
 type
-  TForm3 = class(TForm)
+  TFrmLogin = class(TForm)
     btnEntrarAcesso: TButton;
     edtLoginUser: TEdit;
     edtSenhaUser: TEdit;
     procedure btnEntrarAcessoClick(Sender: TObject);
+    procedure edtLoginUserKeyPress(Sender: TObject; var Key: Char);
   private
     { Private declarations }
   public
@@ -19,13 +20,13 @@ type
   end;
 
 var
-  Form3: TForm3;
+  FrmLogin: TFrmLogin;
 
 implementation
 
 {$R *.dfm}
 
-procedure TForm3.btnEntrarAcessoClick(Sender: TObject);
+procedure TFrmLogin.btnEntrarAcessoClick(Sender: TObject);
 var
   DAO: TOperadorDAO;
   OperadorLogado: TOperador;
@@ -48,4 +49,10 @@ begin
     DAO.Free;
   end;
 end;
+procedure TFrmLogin.edtLoginUserKeyPress(Sender: TObject; var Key: Char);
+begin
+  if not (Key in ['0'..'9', #8]) then
+    Key := #0;
+end;
+
 end.

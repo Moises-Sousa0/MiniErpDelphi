@@ -1,7 +1,6 @@
-object Form1: TForm1
+object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
-  Caption = 'Form1'
   ClientHeight = 441
   ClientWidth = 624
   Color = clDarkgray
@@ -35,6 +34,5 @@ object Form1: TForm1
     Height = 49
     Caption = 'Entrar'
     TabOrder = 2
-    OnClick = btnEntrarAcessoClick
   end
 end

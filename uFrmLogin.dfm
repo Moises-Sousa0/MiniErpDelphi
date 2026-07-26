@@ -1,10 +1,10 @@
-object Form3: TForm3
+object FrmLogin: TFrmLogin
   Left = 0
   Top = 0
-  Caption = 'Form3'
+  Caption = 'Login'
   ClientHeight = 441
   ClientWidth = 624
-  Color = clBtnFace
+  Color = clDarkgray
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -27,6 +27,7 @@ object Form3: TForm3
     Height = 23
     TabOrder = 1
     TextHint = 'Login'
+    OnKeyPress = edtLoginUserKeyPress
   end
   object edtSenhaUser: TEdit
     Left = 224
@@ -35,6 +36,6 @@ object Form3: TForm3
     Height = 23
     PasswordChar = '*'
     TabOrder = 2
-    TextHint = 'Login'
+    TextHint = 'Senha'
   end
 end
