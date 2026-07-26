@@ -1,22 +1,31 @@
-object Form1: TForm1
+object Form3: TForm3
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = 'Form3'
   ClientHeight = 441
   ClientWidth = 624
-  Color = clDarkgray
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 15
+  object btnEntrarAcesso: TButton
+    Left = 224
+    Top = 168
+    Width = 121
+    Height = 49
+    Caption = 'Entrar'
+    TabOrder = 0
+    OnClick = btnEntrarAcessoClick
+  end
   object edtLoginUser: TEdit
     Left = 224
     Top = 64
     Width = 121
     Height = 23
-    TabOrder = 0
+    TabOrder = 1
     TextHint = 'Login'
   end
   object edtSenhaUser: TEdit
@@ -25,16 +34,7 @@ object Form1: TForm1
     Width = 121
     Height = 23
     PasswordChar = '*'
-    TabOrder = 1
-    TextHint = 'Login'
-  end
-  object btnEntrarAcesso: TButton
-    Left = 224
-    Top = 168
-    Width = 121
-    Height = 49
-    Caption = 'Entrar'
     TabOrder = 2
-    OnClick = btnEntrarAcessoClick
+    TextHint = 'Login'
   end
 end

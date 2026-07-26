@@ -44,10 +44,10 @@ begin
       else
         ShowMessage('Login ou senha inválidos');
     finally
-    OperadorLogado.Free;
+
     end;
   finally
-    DAO.Free;
+
   end;
 end;
 

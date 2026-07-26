@@ -137,6 +137,12 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="DAO.Operador.pas">
+            <Form>;
+
+{$R *.res</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uFrmLogin.pas">
             <Form>Form3</Form>
             <FormType>dfm</FormType>
         </DCCReference>

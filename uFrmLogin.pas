@@ -1,4 +1,4 @@
-unit uPrincipal;
+unit uFrmLogin;
 
 interface
 
@@ -7,10 +7,10 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, DAO.Operador, Model.Operador;
 
 type
-  TForm1 = class(TForm)
+  TForm3 = class(TForm)
+    btnEntrarAcesso: TButton;
     edtLoginUser: TEdit;
     edtSenhaUser: TEdit;
-    btnEntrarAcesso: TButton;
     procedure btnEntrarAcessoClick(Sender: TObject);
   private
     { Private declarations }
@@ -19,15 +19,13 @@ type
   end;
 
 var
-  Form1: TForm1;
+  Form3: TForm3;
 
 implementation
 
 {$R *.dfm}
 
-uses uDMConexao;
-
-procedure TForm1.btnEntrarAcessoClick(Sender: TObject);
+procedure TForm3.btnEntrarAcessoClick(Sender: TObject);
 var
   DAO: TOperadorDAO;
   OperadorLogado: TOperador;
@@ -50,5 +48,4 @@ begin
     DAO.Free;
   end;
 end;
-
 end.
