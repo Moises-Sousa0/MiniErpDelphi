@@ -3,12 +3,20 @@
 	<Transactions>
     <Transaction>2026/07/19 00:36:18.000.212,=C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2026/07/23 18:09:29.000.828,=C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2026/07/26 03:23:21.351,=C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2026/07/26 03:29:20.789,E:\MiniErp\Unit1.pas=C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2026/07/26 03:29:20.790,E:\MiniErp\Unit1.dfm=C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2026/07/26 03:29:29.532,E:\MiniErp\PDVErp.dproj=C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
-    <Transaction>2026/07/26 03:29:49.107,=E:\MiniErp\Unit2.pas</Transaction>
-    <Transaction>2026/07/26 03:30:17.471,E:\MiniErp\uDMConexao.dfm=E:\MiniErp\Unit2.dfm</Transaction>
-    <Transaction>2026/07/26 03:30:17.471,E:\MiniErp\uDMConexao.pas=E:\MiniErp\Unit2.pas</Transaction>
+    <Transaction>2026/07/26 03:23:21.000.351,=C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2026/07/26 03:29:20.000.790,C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Unit1.dfm=E:\MiniErp\Unit1.dfm</Transaction>
+    <Transaction>2026/07/26 03:29:20.000.789,C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Unit1.pas=E:\MiniErp\Unit1.pas</Transaction>
+    <Transaction>2026/07/26 03:29:29.000.532,C:\Users\lokil\Documents\Embarcadero\Studio\Projects\Project2.dproj=E:\MiniErp\PDVErp.dproj</Transaction>
+    <Transaction>2026/07/26 03:29:49.000.107,=E:\MiniErp\Unit2.pas</Transaction>
+    <Transaction>2026/07/26 03:30:17.000.471,E:\MiniErp\Unit2.dfm=E:\MiniErp\uDMConexao.dfm</Transaction>
+    <Transaction>2026/07/26 03:30:17.000.471,E:\MiniErp\Unit2.pas=E:\MiniErp\uDMConexao.pas</Transaction>
+    <Transaction>2026/07/26 04:37:58.205,=E:\MiniErp\Unit2.pas</Transaction>
+    <Transaction>2026/07/26 04:38:43.746,E:\MiniErp\Model.Operador.dfm=E:\MiniErp\Unit2.dfm</Transaction>
+    <Transaction>2026/07/26 04:38:43.746,E:\MiniErp\Model.Operador.pas=E:\MiniErp\Unit2.pas</Transaction>
+    <Transaction>2026/07/26 04:39:24.810,=E:\MiniErp\Unit3.pas</Transaction>
+    <Transaction>2026/07/26 04:39:43.957,E:\MiniErp\DAO.Operador.pas=E:\MiniErp\Unit3.pas</Transaction>
+    <Transaction>2026/07/26 04:39:43.957,E:\MiniErp\DAO.Operador.dfm=E:\MiniErp\Unit3.dfm</Transaction>
+    <Transaction>2026/07/26 04:41:19.571,E:\MiniErp\uPrincipal.dfm=E:\MiniErp\Unit1.dfm</Transaction>
+    <Transaction>2026/07/26 04:41:19.571,E:\MiniErp\uPrincipal.pas=E:\MiniErp\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

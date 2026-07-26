@@ -123,14 +123,22 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Unit1.pas">
+        <DCCReference Include="uPrincipal.pas">
             <Form>Form1</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uDMConexao.pas">
-            <Form>DataModule2</Form>
+            <Form>DmConexao</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="Model.Operador.pas">
+            <Form>Form2</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="DAO.Operador.pas">
+            <Form>Form3</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>

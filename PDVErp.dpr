@@ -2,8 +2,10 @@ program PDVErp;
 
 uses
   Vcl.Forms,
-  Unit1 in 'Unit1.pas' {Form1},
-  uDMConexao in 'uDMConexao.pas' {DmConexao: TDmConexao};
+  uPrincipal in 'uPrincipal.pas' {Form1},
+  uDMConexao in 'uDMConexao.pas' {DmConexao: TDataModule},
+  Model.Operador in 'Model.Operador.pas' {Form2},
+  DAO.Operador in 'DAO.Operador.pas' {Form3};
 
 {$R *.res}
 
@@ -12,5 +14,7 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TDmConexao, DmConexao);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm3, Form3);
   Application.Run;
 end.
