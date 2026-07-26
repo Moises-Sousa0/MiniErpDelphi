@@ -8,7 +8,9 @@ uses
   DAO.Operador in 'DAO.Operador.pas' {;
 
 {$R *.res},
-  uFrmLogin in 'uFrmLogin.pas' {FrmLogin};
+  uFrmLogin in 'uFrmLogin.pas' {FrmLogin},
+  Model.Produto in 'Model.Produto.pas',
+  DAO.Produto in 'DAO.Produto.pas';
 
 {$R *.res}
 

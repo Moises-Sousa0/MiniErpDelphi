@@ -32,7 +32,7 @@ begin
     Qry.Open;
 
 
-    if not Qry.Eof then
+    if not Qry.Eof then    //fim do arquiv
     begin
       Result := TOperador.Create;
       Result.Id := Qry.FieldByName('id').AsInteger;

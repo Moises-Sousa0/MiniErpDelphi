@@ -146,6 +146,8 @@
             <Form>FrmLogin</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Model.Produto.pas"/>
+        <DCCReference Include="DAO.Produto.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

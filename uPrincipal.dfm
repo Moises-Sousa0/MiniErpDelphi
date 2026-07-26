@@ -10,29 +10,4 @@ object frmPrincipal: TfrmPrincipal
   Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 15
-  object edtLoginUser: TEdit
-    Left = 224
-    Top = 64
-    Width = 121
-    Height = 23
-    TabOrder = 0
-    TextHint = 'Login'
-  end
-  object edtSenhaUser: TEdit
-    Left = 224
-    Top = 104
-    Width = 121
-    Height = 23
-    PasswordChar = '*'
-    TabOrder = 1
-    TextHint = 'Login'
-  end
-  object btnEntrarAcesso: TButton
-    Left = 224
-    Top = 168
-    Width = 121
-    Height = 49
-    Caption = 'Entrar'
-    TabOrder = 2
-  end
 end
