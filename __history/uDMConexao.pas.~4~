@@ -12,7 +12,8 @@ uses
 
 type
   TDmConexao = class(TDataModule)
-    FDConexao: TFDConnection;
+
+    FDConnection1: TFDConnection;
     FDQuery1: TFDQuery;
     FDPhysPgDriverLink1: TFDPhysPgDriverLink;  private
     { Private declarations }
@@ -27,6 +28,7 @@ implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
+uses Unit1;
 
 {$R *.dfm}
 

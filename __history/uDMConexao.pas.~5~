@@ -27,6 +27,7 @@ implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
+uses Unit1;
 
 {$R *.dfm}
 
