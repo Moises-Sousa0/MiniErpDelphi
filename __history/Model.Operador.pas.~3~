@@ -10,13 +10,9 @@ type
   private
     FId: Integer;
     FNome: String;
-    FLogin: String;
-    FAtivo: Boolean;
   public
     property Id: Integer read FId write FId;
     property Nome: String read FNome write FNome;
-    property Login: String read FLogin write FLogin;
-    property Ativo: Boolean read FAtivo write FAtivo;
   end;
 
 implementation

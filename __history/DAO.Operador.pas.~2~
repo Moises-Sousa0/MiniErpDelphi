@@ -21,21 +21,6 @@ Qry: TFDQuery;
 
 begin
   Result := Nil;
-
-  Qry := TFDQuery.Create(nil);
-  try
-    Qry.Connection := DmConexao.FDConexao;
-    Qry.SQL.Text := 'SELECT id, nome, login, ativo FROM operador ' + 'WHERE login = :login AND senha :senha AND ativo = True';
-
-    Qry.ParamByName('login').AsString := ALogin;
-    Qry.ParamByName('senha').AsString := ASenha;
-    Qry.Open;
-
-  finally
-    Qry.Free;
-  end;
-
-
 end;
 
 end.
