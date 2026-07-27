@@ -39,7 +39,7 @@ object FrmProduto: TFrmProduto
     Height = 15
     Caption = 'Estoque'
   end
-  object editCodigoProd: TEdit
+  object edtCodigoProd: TEdit
     Left = 24
     Top = 80
     Width = 121
@@ -78,5 +78,6 @@ object FrmProduto: TFrmProduto
     Height = 33
     Caption = 'Salvar'
     TabOrder = 4
+    OnClick = btnSalvarProdClick
   end
 end

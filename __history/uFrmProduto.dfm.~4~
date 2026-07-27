@@ -1,0 +1,83 @@
+object FrmProduto: TFrmProduto
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 441
+  ClientWidth = 624
+  Color = clDarkgray
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object lblCodigoProd: TLabel
+    Left = 24
+    Top = 59
+    Width = 102
+    Height = 15
+    Caption = 'C'#243'digo do produto'
+  end
+  object lblDescricaoProd: TLabel
+    Left = 24
+    Top = 131
+    Width = 51
+    Height = 15
+    Caption = 'Descri'#231#227'o'
+  end
+  object lblPrecVendaProd: TLabel
+    Left = 24
+    Top = 200
+    Width = 30
+    Height = 15
+    Caption = 'Pre'#231'o'
+  end
+  object lblEstoqueProd: TLabel
+    Left = 24
+    Top = 272
+    Width = 42
+    Height = 15
+    Caption = 'Estoque'
+  end
+  object editCodigoProd: TEdit
+    Left = 24
+    Top = 80
+    Width = 121
+    Height = 23
+    TabOrder = 0
+    TextHint = 'Digite aqui'
+  end
+  object edtDescricaoProd: TEdit
+    Left = 24
+    Top = 152
+    Width = 121
+    Height = 23
+    TabOrder = 1
+    TextHint = 'Digite aqui'
+  end
+  object edtPrecVendaProd: TEdit
+    Left = 24
+    Top = 221
+    Width = 121
+    Height = 23
+    TabOrder = 2
+    TextHint = 'Digite aqui'
+  end
+  object edtEstoqueProd: TEdit
+    Left = 24
+    Top = 293
+    Width = 121
+    Height = 23
+    TabOrder = 3
+    TextHint = 'Digite aqui'
+  end
+  object btnSalvarProd: TButton
+    Left = 328
+    Top = 182
+    Width = 105
+    Height = 33
+    Caption = 'Salvar'
+    TabOrder = 4
+    OnClick = btnSalvarProdClick
+  end
+end

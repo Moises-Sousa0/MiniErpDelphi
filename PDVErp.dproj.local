@@ -14,8 +14,8 @@
     <Transaction>2026/07/26 04:38:43.000.746,E:\MiniErp\Model.Operador.dfm=E:\MiniErp\Unit2.dfm</Transaction>
     <Transaction>2026/07/26 04:38:43.000.746,E:\MiniErp\Model.Operador.pas=E:\MiniErp\Unit2.pas</Transaction>
     <Transaction>2026/07/26 04:39:24.000.810,=E:\MiniErp\Unit3.pas</Transaction>
-    <Transaction>2026/07/26 04:39:43.000.957,E:\MiniErp\DAO.Operador.dfm=E:\MiniErp\Unit3.dfm</Transaction>
     <Transaction>2026/07/26 04:39:43.000.957,E:\MiniErp\DAO.Operador.pas=E:\MiniErp\Unit3.pas</Transaction>
+    <Transaction>2026/07/26 04:39:43.000.957,E:\MiniErp\DAO.Operador.dfm=E:\MiniErp\Unit3.dfm</Transaction>
     <Transaction>2026/07/26 04:41:19.000.571,E:\MiniErp\uPrincipal.dfm=E:\MiniErp\Unit1.dfm</Transaction>
     <Transaction>2026/07/26 04:41:19.000.571,E:\MiniErp\uPrincipal.pas=E:\MiniErp\Unit1.pas</Transaction>
     <Transaction>2026/07/26 06:24:10.000.329,=E:\MiniErp\Unit3.pas</Transaction>
@@ -30,5 +30,7 @@
     <Transaction>2026/07/27 00:14:02.323,=E:\MiniErp\Unit3.pas</Transaction>
     <Transaction>2026/07/27 00:14:14.387,E:\MiniErp\uFrmProduto.pas=E:\MiniErp\Unit3.pas</Transaction>
     <Transaction>2026/07/27 00:14:14.387,E:\MiniErp\uFrmProduto.dfm=E:\MiniErp\Unit3.dfm</Transaction>
+    <Transaction>2026/07/27 01:41:21.986,E:\MiniErp\uFrmPrincipal.dfm=E:\MiniErp\uPrincipal.dfm</Transaction>
+    <Transaction>2026/07/27 01:41:21.986,E:\MiniErp\uFrmPrincipal.pas=E:\MiniErp\uPrincipal.pas</Transaction>
   </Transactions>
 </BorlandProject>

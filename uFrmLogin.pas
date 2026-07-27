@@ -26,6 +26,8 @@ implementation
 
 {$R *.dfm}
 
+uses uFrmProduto;
+
 procedure TFrmLogin.btnEntrarAcessoClick(Sender: TObject);
 var
   DAO: TOperadorDAO;
@@ -54,5 +56,7 @@ begin
   if not (Key in ['0'..'9', #8]) then
     Key := #0;
 end;
+
+
 
 end.
