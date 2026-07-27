@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, DAO.Operador, Model.Operador;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, DAO.Operador, Model.Operador, uFrmPrincipal;
 
 type
   TFrmLogin = class(TForm)
@@ -41,6 +41,7 @@ begin
       if Assigned(OperadorLogado) then
       begin
         ShowMessage('Bem vindo, ' + OperadorLogado.Nome);
+        FrmPrincipal.Show;
       end
       else
         ShowMessage('Login ou senha inválidos');

@@ -4,10 +4,11 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Menus;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Menus, uFrmProduto, uFrameProduto,
+  Vcl.ExtCtrls;
 
 type
-  TfrmPrincipal = class(TForm)
+  TFrmPrincipal = class(TForm)
     MenuFrmPrincipal: TMainMenu;
     Cadastros1: TMenuItem;
     Cadastros2: TMenuItem;
@@ -17,6 +18,8 @@ type
     Consultas1: TMenuItem;
     HistricodeVendas1: TMenuItem;
     Sair1: TMenuItem;
+    pnlConteudoPrincipal: TPanel;
+    procedure Cadastros2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,7 +27,7 @@ type
   end;
 
 var
-  frmPrincipal: TfrmPrincipal;
+  FrmPrincipal: TFrmPrincipal;
 
 implementation
 
@@ -33,5 +36,14 @@ implementation
 uses uDMConexao;
 
 
+
+procedure TFrmPrincipal.Cadastros2Click(Sender: TObject);
+var
+  Frame: TFrameProduto;
+begin
+  Frame := TFrameProduto.Create(pnlConteudoPrincipal);
+  Frame.Parent := pnlConteudoPrincipal;
+  Frame.Align := alClient;
+end;
 
 end.

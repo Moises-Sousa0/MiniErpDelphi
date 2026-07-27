@@ -2,7 +2,7 @@ program PDVErp;
 
 uses
   Vcl.Forms,
-  uFrmPrincipal in 'uFrmPrincipal.pas' {frmPrincipal},
+  uFrmPrincipal in 'uFrmPrincipal.pas' {FrmPrincipal},
   uDMConexao in 'uDMConexao.pas' {DmConexao: TDataModule},
   Model.Operador in 'Model.Operador.pas' {Form2},
   DAO.Operador in 'DAO.Operador.pas' {;
@@ -11,7 +11,7 @@ uses
   uFrmLogin in 'uFrmLogin.pas' {FrmLogin},
   Model.Produto in 'Model.Produto.pas',
   DAO.Produto in 'DAO.Produto.pas',
-  uFrmProduto in 'uFrmProduto.pas' {FrmProduto};
+  uFrameProduto in 'uFrameProduto.pas' {FrameProduto: TFrame};
 
 {$R *.res}
 
@@ -19,8 +19,7 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFrmLogin, FrmLogin);
-  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
   Application.CreateForm(TDmConexao, DmConexao);
-  Application.CreateForm(TFrmProduto, FrmProduto);
   Application.Run;
 end.
