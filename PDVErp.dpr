@@ -10,7 +10,8 @@ uses
 {$R *.res},
   uFrmLogin in 'uFrmLogin.pas' {FrmLogin},
   Model.Produto in 'Model.Produto.pas',
-  DAO.Produto in 'DAO.Produto.pas';
+  DAO.Produto in 'DAO.Produto.pas',
+  uFrmProduto in 'uFrmProduto.pas' {FrmProduto};
 
 {$R *.res}
 
@@ -20,5 +21,6 @@ begin
   Application.CreateForm(TFrmLogin, FrmLogin);
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TDmConexao, DmConexao);
+  Application.CreateForm(TFrmProduto, FrmProduto);
   Application.Run;
 end.

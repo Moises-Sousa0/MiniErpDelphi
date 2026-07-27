@@ -148,6 +148,10 @@
         </DCCReference>
         <DCCReference Include="Model.Produto.pas"/>
         <DCCReference Include="DAO.Produto.pas"/>
+        <DCCReference Include="uFrmProduto.pas">
+            <Form>FrmProduto</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
