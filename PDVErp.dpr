@@ -11,7 +11,8 @@ uses
   uFrmLogin in 'uFrmLogin.pas' {FrmLogin},
   Model.Produto in 'Model.Produto.pas',
   DAO.Produto in 'DAO.Produto.pas',
-  uFrameProduto in 'uFrameProduto.pas' {FrameProduto: TFrame};
+  uFrameProduto in 'uFrameProduto.pas' {FrameProduto: TFrame},
+  Model.Caixa in 'Model.Caixa.pas';
 
 {$R *.res}
 

@@ -13,6 +13,7 @@ type
   FDescricao: String;
   FPrecoVenda: Currency;
   FEstoqueAtual: Integer;
+
   public
   property Id: Integer read FId write FId;
   property Codigo: String read FCodigo write FCodigo;
