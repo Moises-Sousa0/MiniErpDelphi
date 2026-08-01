@@ -1,0 +1,32 @@
+unit DAO.Caixa;
+
+interface
+uses
+  System.SysUtils, System.Classes, uDMConexao, Model.Caixa, FireDAC.Comp.Client;
+
+type
+  TCaixaDao = class
+  private
+    function BuscarCaixaAberto(Const CaixaStatus: Boolean): TCaixa;
+  public
+
+  end;
+implementation
+function TCaixaDao.BuscarCaixaAberto(Const CaixaStatus: Boolean): TCaixa;
+
+var
+Qry: TFDQuery;
+
+begin
+  Result := Nil;
+
+  Qry := TFDQuery.Create(nil);
+  try
+    Qry.Connection := DmConexao.FDConexao;
+    Qry.SQL.Text := 'SELECT '
+  finally
+
+  end;
+end;
+
+end.

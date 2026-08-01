@@ -35,7 +35,7 @@ begin
       Result.ValorAbertura := Qry.FieldByName('valor_abertura').AsCurrency;
       Result.DataFechamento := Qry.FieldByName('data_fechamento').AsDateTime;
       Result.ValorFechamento := Qry.FieldByName('valor_fechamento').AsCurrency;
-      Result.Status := Qry.FieldByName('status').AsString = 'ABERTO';
+      Result.Status := Qry.FieldByName('status').AsBoolean;
     end;
 
   finally

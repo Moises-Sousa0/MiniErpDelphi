@@ -23,7 +23,7 @@ begin
   Qry := TFDQuery.Create(nil);
   try
     Qry.Connection := DmConexao.FDConexao;
-    Qry.SQL.Text := 'SELECT id, operador_id, data_abertura, data_fechamento, valor_abertura, valor_fechamento, status FROM caixa' + ' WHERE status = ''ABERTO'';';
+    Qry.SQL.Text := 'SELECT id, id_operador, data_abertura, data_fechamento, valor_abertura, valor_fechamento, status FROM caixa' + ' WHERE status = ''ABERTO'';';
     Qry.Open;
 
     if not Qry.Eof then
@@ -35,7 +35,7 @@ begin
       Result.ValorAbertura := Qry.FieldByName('valor_abertura').AsCurrency;
       Result.DataFechamento := Qry.FieldByName('data_fechamento').AsDateTime;
       Result.ValorFechamento := Qry.FieldByName('valor_fechamento').AsCurrency;
-      Result.Status := Qry.FieldByName('status').AsString = 'ABERTO';
+      Result.Status := Qry.FieldByName('status').AsBoolean;
     end;
 
   finally
