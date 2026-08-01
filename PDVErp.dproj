@@ -156,6 +156,7 @@
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="Model.Caixa.pas"/>
+        <DCCReference Include="DAO.Caixa.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

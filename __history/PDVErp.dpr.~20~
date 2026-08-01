@@ -12,8 +12,7 @@ uses
   Model.Produto in 'Model.Produto.pas',
   DAO.Produto in 'DAO.Produto.pas',
   uFrameProduto in 'uFrameProduto.pas' {FrameProduto: TFrame},
-  Model.Caixa in 'Model.Caixa.pas',
-  DAO.Caixa in 'DAO.Caixa.pas';
+  Model.Caixa in 'Model.Caixa.pas';
 
 {$R *.res}
 
