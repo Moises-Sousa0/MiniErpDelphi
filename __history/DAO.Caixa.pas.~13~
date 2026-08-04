@@ -59,7 +59,7 @@ begin
     Qry.ParamByName('operador_id').AsInteger := Caixa.OperadorId;
     Qry.ParamByName('data_abertura').AsDateTime := Caixa.DataAbertura;
     Qry.ParamByName('valor_abertura').AsCurrency := Caixa.ValorAbertura;
-    Qry.ParamByName('status').AsString := 'ABERTO';
+    Qry.ParamByName('status').AsString := Caixa.Status;
     Qry.ExecSQL;
   finally
     Qry.Free;

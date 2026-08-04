@@ -46,24 +46,8 @@ begin
 end;
 
 procedure TCaixaDao.AbrirCaixa(Caixa: TCaixa);
-var
-Qry: TFDQuery;
-
 begin
-  Qry := TFDQuery.Create(nil);
-  try
-    Qry.Connection := DmConexao.FDConexao;
-    Qry.SQL.Text := 'INSERT INTO CAIXA (operador_id, data_abertura, valor_abertura, status) VALUES (:operador_id, :data_abertura, :valor_abertura, :status)';
 
-
-    Qry.ParamByName('operador_id').AsInteger := Caixa.OperadorId;
-    Qry.ParamByName('data_abertura').AsDateTime := Caixa.DataAbertura;
-    Qry.ParamByName('valor_abertura').AsCurrency := Caixa.ValorAbertura;
-    Qry.ParamByName('status').AsString := 'ABERTO';
-    Qry.ExecSQL;
-  finally
-    Qry.Free;
-  end;
 end;
 
 end.

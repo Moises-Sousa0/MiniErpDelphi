@@ -50,19 +50,18 @@ var
 Qry: TFDQuery;
 
 begin
+  Result := Nil;
+
   Qry := TFDQuery.Create(nil);
   try
     Qry.Connection := DmConexao.FDConexao;
-    Qry.SQL.Text := 'INSERT INTO CAIXA (operador_id, data_abertura, valor_abertura, status) VALUES (:operador_id, :data_abertura, :valor_abertura, :status)';
-
-
-    Qry.ParamByName('operador_id').AsInteger := Caixa.OperadorId;
-    Qry.ParamByName('data_abertura').AsDateTime := Caixa.DataAbertura;
-    Qry.ParamByName('valor_abertura').AsCurrency := Caixa.ValorAbertura;
-    Qry.ParamByName('status').AsString := 'ABERTO';
+    Qry.SQL.Text := 'SELECT id, operador_id, data_abertura, data_fechamento, valor_abertura, valor_fechamentom, status FROM caixa' + ' WHERE status = ''ABERTO'';';
     Qry.ExecSQL;
+
+    Result.
+
   finally
-    Qry.Free;
+
   end;
 end;
 
