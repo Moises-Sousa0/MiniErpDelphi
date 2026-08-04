@@ -82,9 +82,8 @@ begin
     Qry.ParamByName('data_fechamento').AsDateTime := Caixa.DataFechamento;
     Qry.ParamByName('valor_fechamento').AsCurrency := Caixa.ValorFechamento;
     Qry.ParamByName('status').AsString := 'FECHADO';
-    Qry.ExecSQL;
   finally
-    Qry.Free;
+
   end;
 end;
 

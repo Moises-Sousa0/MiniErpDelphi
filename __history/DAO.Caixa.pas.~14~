@@ -7,11 +7,13 @@ uses
 type
   TCaixaDao = class
   private
-    function BuscarCaixaAberto(): TCaixa;
   public
-
+    function BuscarCaixaAberto(): TCaixa;
+    procedure AbrirCaixa(Caixa: TCaixa);
   end;
+
 implementation
+
 function TCaixaDao.BuscarCaixaAberto(): TCaixa;
 
 var
@@ -35,9 +37,30 @@ begin
       Result.ValorAbertura := Qry.FieldByName('valor_abertura').AsCurrency;
       Result.DataFechamento := Qry.FieldByName('data_fechamento').AsDateTime;
       Result.ValorFechamento := Qry.FieldByName('valor_fechamento').AsCurrency;
-      Result.Status := Qry.FieldByName('status').AsBoolean;
+      Result.Status := Qry.FieldByName('status').AsString = 'ABERTO';
     end;
 
+  finally
+    Qry.Free;
+  end;
+end;
+
+procedure TCaixaDao.AbrirCaixa(Caixa: TCaixa);
+var
+Qry: TFDQuery;
+
+begin
+  Qry := TFDQuery.Create(nil);
+  try
+    Qry.Connection := DmConexao.FDConexao;
+    Qry.SQL.Text := 'INSERT INTO CAIXA (operador_id, data_abertura, valor_abertura, status) VALUES (:operador_id, :data_abertura, :valor_abertura, :status)';
+
+
+    Qry.ParamByName('operador_id').AsInteger := Caixa.OperadorId;
+    Qry.ParamByName('data_abertura').AsDateTime := Caixa.DataAbertura;
+    Qry.ParamByName('valor_abertura').AsCurrency := Caixa.ValorAbertura;
+    Qry.ParamByName('status').AsString := 'ABERTO';
+    Qry.ExecSQL;
   finally
     Qry.Free;
   end;
