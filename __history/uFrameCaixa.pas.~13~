@@ -35,7 +35,6 @@ constructor TFrameCaixa.Create(AOwner: TComponent);
 begin
   inherited Create(AOwner);
   FCaixaDao := TCaixaDao.Create;
-  AtualizarTela;
 end;
 
 
@@ -54,7 +53,7 @@ begin
     lblStatusCaixa.Visible := True;
     btnAbrirCaixa.Visible := True;
     btnFecharCaixa.Visible := False;
-    lblCaixaInfo.Visible := False;
+    lblCaixaInfo.Visible := True;
     EdtValorAbertura.Visible := True;
   end
 
@@ -62,12 +61,10 @@ begin
   begin
     lblStatusCaixa.Visible := True;
     btnFecharCaixa.Visible := True;
-    lblCaixaInfo.Visible := True;
+    lblCaixaInfo.Visible := False;
     btnAbrirCaixa.Visible := False;
     EdtValorAbertura.Visible := False;
   end;
 end;
-
-
 
 end.

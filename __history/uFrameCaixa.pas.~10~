@@ -18,7 +18,7 @@ type
     { Private declarations }
     FCaixaDao: TCaixaDao;
     FCaixaAtual: TCaixa;
-    procedure AtualizarTela;
+    procedure AtualizarTela(FrameCaixa: TFrame);
 
   public
     { Public declarations }
@@ -35,7 +35,6 @@ constructor TFrameCaixa.Create(AOwner: TComponent);
 begin
   inherited Create(AOwner);
   FCaixaDao := TCaixaDao.Create;
-  AtualizarTela;
 end;
 
 
@@ -49,25 +48,6 @@ end;
 procedure TFrameCaixa.AtualizarTela;
 begin
   FCaixaAtual := FCaixaDao.BuscarCaixaAberto;
-  if FCaixaAtual = nil then
-  begin
-    lblStatusCaixa.Visible := True;
-    btnAbrirCaixa.Visible := True;
-    btnFecharCaixa.Visible := False;
-    lblCaixaInfo.Visible := False;
-    EdtValorAbertura.Visible := True;
-  end
-
-  else
-  begin
-    lblStatusCaixa.Visible := True;
-    btnFecharCaixa.Visible := True;
-    lblCaixaInfo.Visible := True;
-    btnAbrirCaixa.Visible := False;
-    EdtValorAbertura.Visible := False;
-  end;
 end;
-
-
 
 end.

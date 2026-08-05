@@ -4,18 +4,28 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
-  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, DAO.Caixa, Model.Caixa, uFrmPrincipal;
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, DAO.Caixa, Model.Caixa, uFrmPrincipal,
+  Vcl.StdCtrls;
 
 type
   TFrameCaixa = class(TFrame)
+    lblStatusCaixa: TLabel;
+    EdtValorAbertura: TEdit;
+    btnAbrirCaixa: TButton;
+    btnFecharCaixa: TButton;
+    lblCaixaInfo: TLabel;
   private
     { Private declarations }
     FCaixaDao: TCaixaDao;
+    FCaixaAtual: TCaixa;
+    procedure AtualizarTela(FrameCaixa: TFrame);
+
   public
     { Public declarations }
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
   end;
+
 
 implementation
 
@@ -27,10 +37,17 @@ begin
   FCaixaDao := TCaixaDao.Create;
 end;
 
+
 destructor TFrameCaixa.Destroy;
 begin
   FCaixaDao.Free;
   inherited Destroy;
+end;
+
+
+procedure TFrameCaixa.AtualizarTela;
+begin
+  FCaixaDao.BuscarCaixaAberto;
 end;
 
 end.

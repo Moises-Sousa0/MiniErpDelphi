@@ -35,7 +35,6 @@ constructor TFrameCaixa.Create(AOwner: TComponent);
 begin
   inherited Create(AOwner);
   FCaixaDao := TCaixaDao.Create;
-  AtualizarTela;
 end;
 
 
@@ -67,7 +66,5 @@ begin
     EdtValorAbertura.Visible := False;
   end;
 end;
-
-
 
 end.
