@@ -10,6 +10,7 @@ type
   public
     function BuscarCaixaAberto(): TCaixa;
     procedure AbrirCaixa(Caixa: TCaixa);
+    procedure FecharCaixa(Caixa: TCaixa);
   end;
 
 implementation
@@ -43,12 +44,49 @@ begin
   finally
     Qry.Free;
   end;
-
 end;
 
 procedure TCaixaDao.AbrirCaixa(Caixa: TCaixa);
-begin
+var
+Qry: TFDQuery;
 
+begin
+  Qry := TFDQuery.Create(nil);
+  try
+    Qry.Connection := DmConexao.FDConexao;
+    Qry.SQL.Text := 'INSERT INTO CAIXA (operador_id, data_abertura, valor_abertura, status) VALUES (:operador_id, :data_abertura, :valor_abertura, :status)';
+
+
+    Qry.ParamByName('operador_id').AsInteger := Caixa.OperadorId;
+    Qry.ParamByName('data_abertura').AsDateTime := Caixa.DataAbertura;
+    Qry.ParamByName('valor_abertura').AsCurrency := Caixa.ValorAbertura;
+    Qry.ParamByName('status').AsString := 'ABERTO';
+    Qry.ExecSQL;
+  finally
+    Qry.Free;
+  end;
 end;
+
+
+procedure TCaixaDao.FecharCaixa(Caixa: TCaixa);
+var
+Qry: TFDQuery;
+
+begin
+  Qry := TFDQuery.Create(nil);
+  try
+    Qry.Connection := DmConexao.FDConexao;
+    Qry.SQL.Text := 'UPDATE caixa SET data_fechamento = :data_fechamento, valor_fechamento = :valor_fechamento, status = :status WHERE id = :id';
+
+    Qry.ParamByName('id').AsInteger := Caixa.Id;
+    Qry.ParamByName('data_fechamento').AsDateTime := Caixa.DataFechamento;
+    Qry.ParamByName('valor_fechamento').AsCurrency := Caixa.ValorFechamento;
+    Qry.ParamByName('status').AsString := 'FECHADO';
+    Qry.ExecSQL;
+  finally
+    Qry.Free;
+  end;
+end;
+
 
 end.

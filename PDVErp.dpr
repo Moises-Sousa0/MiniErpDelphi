@@ -13,7 +13,8 @@ uses
   DAO.Produto in 'DAO.Produto.pas',
   uFrameProduto in 'uFrameProduto.pas' {FrameProduto: TFrame},
   Model.Caixa in 'Model.Caixa.pas',
-  DAO.Caixa in 'DAO.Caixa.pas';
+  DAO.Caixa in 'DAO.Caixa.pas',
+  uFrameCaixa in 'uFrameCaixa.pas' {FrameCaixa: TFrameCaixa};
 
 {$R *.res}
 

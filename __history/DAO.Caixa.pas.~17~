@@ -1,0 +1,93 @@
+unit DAO.Caixa;
+
+interface
+uses
+  System.SysUtils, System.Classes, uDMConexao, Model.Caixa, FireDAC.Comp.Client;
+
+type
+  TCaixaDao = class
+  private
+    FcaixaDao: TCaixaDao;
+  public
+    function BuscarCaixaAberto(): TCaixa;
+    procedure AbrirCaixa(Caixa: TCaixa);
+    procedure FecharCaixa(Caixa: TCaixa);
+  end;
+
+implementation
+
+function TCaixaDao.BuscarCaixaAberto(): TCaixa;
+
+var
+Qry: TFDQuery;
+
+begin
+  Result := Nil;
+
+  Qry := TFDQuery.Create(nil);
+  try
+    Qry.Connection := DmConexao.FDConexao;
+    Qry.SQL.Text := 'SELECT id, operador_id, data_abertura, data_fechamento, valor_abertura, valor_fechamento, status FROM caixa' + ' WHERE status = ''ABERTO'';';
+    Qry.Open;
+
+    if not Qry.Eof then
+    begin
+      Result := TCaixa.Create;
+      Result.Id := Qry.FieldByName('id').AsInteger;
+      Result.OperadorId := Qry.FieldByName('operador_id').AsInteger;
+      Result.DataAbertura := Qry.FieldByName('data_abertura').AsDateTime;
+      Result.ValorAbertura := Qry.FieldByName('valor_abertura').AsCurrency;
+      Result.DataFechamento := Qry.FieldByName('data_fechamento').AsDateTime;
+      Result.ValorFechamento := Qry.FieldByName('valor_fechamento').AsCurrency;
+      Result.Status := Qry.FieldByName('status').AsString = 'ABERTO';
+    end;
+
+  finally
+    Qry.Free;
+  end;
+end;
+
+procedure TCaixaDao.AbrirCaixa(Caixa: TCaixa);
+var
+Qry: TFDQuery;
+
+begin
+  Qry := TFDQuery.Create(nil);
+  try
+    Qry.Connection := DmConexao.FDConexao;
+    Qry.SQL.Text := 'INSERT INTO CAIXA (operador_id, data_abertura, valor_abertura, status) VALUES (:operador_id, :data_abertura, :valor_abertura, :status)';
+
+
+    Qry.ParamByName('operador_id').AsInteger := Caixa.OperadorId;
+    Qry.ParamByName('data_abertura').AsDateTime := Caixa.DataAbertura;
+    Qry.ParamByName('valor_abertura').AsCurrency := Caixa.ValorAbertura;
+    Qry.ParamByName('status').AsString := 'ABERTO';
+    Qry.ExecSQL;
+  finally
+    Qry.Free;
+  end;
+end;
+
+
+procedure TCaixaDao.FecharCaixa(Caixa: TCaixa);
+var
+Qry: TFDQuery;
+
+begin
+  Qry := TFDQuery.Create(nil);
+  try
+    Qry.Connection := DmConexao.FDConexao;
+    Qry.SQL.Text := 'UPDATE caixa SET data_fechamento = :data_fechamento, valor_fechamento = :valor_fechamento, status = :status WHERE id = :id';
+
+    Qry.ParamByName('id').AsInteger := Caixa.Id;
+    Qry.ParamByName('data_fechamento').AsDateTime := Caixa.DataFechamento;
+    Qry.ParamByName('valor_fechamento').AsCurrency := Caixa.ValorFechamento;
+    Qry.ParamByName('status').AsString := 'FECHADO';
+    Qry.ExecSQL;
+  finally
+    Qry.Free;
+  end;
+end;
+
+
+end.
