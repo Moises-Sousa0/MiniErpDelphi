@@ -158,10 +158,11 @@
         <DCCReference Include="Model.Caixa.pas"/>
         <DCCReference Include="DAO.Caixa.pas"/>
         <DCCReference Include="uFrameCaixa.pas">
-            <Form>Frame2</Form>
+            <Form>FrameCaixa</Form>
             <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
+        <DCCReference Include="uSessao.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

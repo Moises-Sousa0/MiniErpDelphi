@@ -14,7 +14,8 @@ uses
   uFrameProduto in 'uFrameProduto.pas' {FrameProduto: TFrame},
   Model.Caixa in 'Model.Caixa.pas',
   DAO.Caixa in 'DAO.Caixa.pas',
-  uFrameCaixa in 'uFrameCaixa.pas' {FrameCaixa: TFrameCaixa};
+  uFrameCaixa in 'uFrameCaixa.pas' {FrameCaixa: TFrame},
+  uSessao in 'uSessao.pas';
 
 {$R *.res}
 

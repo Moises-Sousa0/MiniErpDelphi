@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, DAO.Operador, Model.Operador, uFrmPrincipal, uSessao;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, DAO.Operador, Model.Operador, uFrmPrincipal;
 
 type
   TFrmLogin = class(TForm)
@@ -31,12 +31,13 @@ uses uFrmProduto;
 procedure TFrmLogin.btnEntrarAcessoClick(Sender: TObject);
 var
   DAO: TOperadorDAO;
-
+  OperadorLogado: TOperador;
 
 begin
   DAO := TOperadorDAO.Create;
   try
     OperadorLogado := DAO.Autenticar(edtLoginUser.Text, edtSenhaUser.Text);
+    try
       if Assigned(OperadorLogado) then
       begin
         ShowMessage('Bem vindo, ' + OperadorLogado.Nome);
@@ -44,6 +45,9 @@ begin
       end
       else
         ShowMessage('Login ou senha inválidos');
+    finally
+    OperadorLogado.Free;
+    end;
   finally
     DAO.Free;
   end;
