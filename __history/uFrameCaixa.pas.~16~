@@ -14,7 +14,6 @@ type
     btnAbrirCaixa: TButton;
     btnFecharCaixa: TButton;
     lblCaixaInfo: TLabel;
-    procedure btnAbrirCaixaClick(Sender: TObject);
   private
     { Private declarations }
     FCaixaDao: TCaixaDao;
@@ -31,8 +30,6 @@ type
 implementation
 
 {$R *.dfm}
-
-
 
 constructor TFrameCaixa.Create(AOwner: TComponent);
 begin
@@ -71,9 +68,6 @@ begin
   end;
 end;
 
-procedure TFrameCaixa.btnAbrirCaixaClick(Sender: TObject);
-begin
 
-end;
 
 end.

@@ -48,6 +48,7 @@ object FrameCaixa: TFrameCaixa
     Height = 25
     Caption = 'Abrir'
     TabOrder = 1
+    OnClick = btnAbrirCaixaClick
   end
   object btnFecharCaixa: TButton
     Left = 392
