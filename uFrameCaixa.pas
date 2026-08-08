@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
-  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, DAO.Caixa, Model.Caixa, uFrmPrincipal,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, DAO.Caixa, Model.Caixa,
   Vcl.StdCtrls, uSessao;
 
 type
@@ -60,6 +60,7 @@ begin
     btnFecharCaixa.Visible := False;
     lblCaixaInfo.Visible := False;
     EdtValorAbertura.Visible := True;
+    lblStatusCaixa.Caption := 'Fechado';
   end
 
   else
@@ -69,6 +70,8 @@ begin
     lblCaixaInfo.Visible := True;
     btnAbrirCaixa.Visible := False;
     EdtValorAbertura.Visible := False;
+    lblStatusCaixa.Caption := 'Aberto';
+    lblCaixaInfo.Caption := IntToStr(FCaixaAtual.OperadorId);
   end;
 end;
 

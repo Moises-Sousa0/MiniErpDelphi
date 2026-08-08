@@ -21,10 +21,6 @@ object FrmPrincipal: TFrmPrincipal
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitLeft = 368
-    ExplicitTop = 296
-    ExplicitWidth = 185
-    ExplicitHeight = 41
   end
   object MenuFrmPrincipal: TMainMenu
     Left = 864
@@ -43,6 +39,7 @@ object FrmPrincipal: TFrmPrincipal
       end
       object Caixa1: TMenuItem
         Caption = 'Caixa'
+        OnClick = Caixa1Click
       end
     end
     object Consultas1: TMenuItem

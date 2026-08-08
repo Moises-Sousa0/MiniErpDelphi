@@ -39,7 +39,7 @@ object FrameCaixa: TFrameCaixa
     Width = 121
     Height = 23
     TabOrder = 0
-    Text = 'valor abertura'
+    TextHint = 'valor abertura'
   end
   object btnAbrirCaixa: TButton
     Left = 105
