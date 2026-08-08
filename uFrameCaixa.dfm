@@ -57,5 +57,6 @@ object FrameCaixa: TFrameCaixa
     Height = 25
     Caption = 'Fechar'
     TabOrder = 2
+    OnClick = btnFecharCaixaClick
   end
 end

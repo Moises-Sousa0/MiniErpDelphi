@@ -15,6 +15,7 @@ type
     btnFecharCaixa: TButton;
     lblCaixaInfo: TLabel;
     procedure btnAbrirCaixaClick(Sender: TObject);
+    procedure btnFecharCaixaClick(Sender: TObject);
   private
     { Private declarations }
     FCaixaDao: TCaixaDao;
@@ -85,6 +86,13 @@ begin
   finally
     Caixa.Free;
   end;
+
+end;
+
+procedure TFrameCaixa.btnFecharCaixaClick(Sender: TObject);
+begin
+  FCaixaAtual.DataFechamento := Now;
+  FCaixaAtual.ValorFechamento := 0;
 
 end;
 
