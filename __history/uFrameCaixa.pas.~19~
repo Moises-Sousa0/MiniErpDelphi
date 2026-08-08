@@ -90,12 +90,10 @@ begin
 end;
 
 procedure TFrameCaixa.btnFecharCaixaClick(Sender: TObject);
-
 begin
   FCaixaAtual.DataFechamento := Now;
   FCaixaAtual.ValorFechamento := 0;
-  FCaixaDao.FecharCaixa(FCaixaAtual);
-  AtualizarTela;
+
 end;
 
 end.
